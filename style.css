@@ -13,17 +13,13 @@ header{
     width: auto;
     padding: 13px;
     display: flex;
-   /*  justify-content: space-between; */
-  /*   flex-direction: row; */
 }
 
 #mainnav{
     width: max-content; 
     display: flex;
     flex-grow: 1;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 }
 
 #navlist{
@@ -32,7 +28,7 @@ header{
     flex-grow: 1;
     margin: 0;
     width: 2%;
-    justify-content: start;
+    justify-content: start; 
     margin-bottom: -2px;
     margin-left: 7%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -41,7 +37,6 @@ header{
 .logoheader{
     height: 30px; 
     position: absolute;
-    top: 8px;
     margin-left: 0px;
     margin-right: 2%;
 }
@@ -55,7 +50,7 @@ header{
 
 #navlist li {
     display: none;
-    gap: 1%; 
+     gap: 1%; 
 }
 
 #navlist li a {
@@ -79,22 +74,16 @@ header img {
     gap: 15px;
 }
 
-#imglogin{
-    margin-bottom:0px;
+#imglogin, #imgshopping{
     margin-right: 5%;
 }
-
-#imgshopping{
-    margin-right:5px;
-}
-
 
 #container{
     display: flex;
     align-items: flex-end;
     width: 100%;
     height: auto; 
-    min-height:32vh;
+    min-height:30vh;
     max-height:82vh; 
     max-width: 100%;
 }
@@ -107,14 +96,12 @@ header img {
     height: 97px;
     width: 100%;
     margin-left: 16px;
-
 }
 
 #container h1 {
     color:#EEEEEE;
     font-size: clamp(1.2rem, 8vw, 5rem);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
-     
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
 }
 
 #container p {
@@ -128,9 +115,8 @@ header img {
     object-fit: cover;
     width: 100%;
     height: auto;
-    min-height:32vh;
+    min-height:30vh;
     max-height:82vh;  
-    max-width: 100%;
     z-index: -1;
 } 
 
@@ -142,13 +128,12 @@ header img {
     text-align: center;
     max-width: 1440PX;
     min-width: 100%;
-    margin: 0%;
 }
 
 section .models{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     flex-wrap: nowrap;
     background-color:#D9D9D9 ;
@@ -157,7 +142,7 @@ section .models{
     margin: 3%;
     padding: 2%;
     max-height: 557px;
-    min-height: 49vh;
+    min-height: 38vh;
     border-radius: 5%; 
 }
 
@@ -183,10 +168,6 @@ section .models{
     max-width: 100%;
     min-width: 150px;
     max-height: 650px;
-    /* min-height: 225px; */
-    /* position: relative; */
-    /* justify-self: center; */
-
 }
 
 .modelsnav{
@@ -205,7 +186,7 @@ section .models{
     margin: auto; 
 }
 
-.modelsnav span{
+ .modelsnav span{
     position: relative;
     display: flex;
     align-items: center;
@@ -213,7 +194,7 @@ section .models{
     margin: 11px;
     right: -30px; 
     display: none;  
-}
+} 
 
 #container2 #modelbutton1, #modelbutton2,
 #modelbutton3,
@@ -224,21 +205,6 @@ section .models{
     border-radius: 23px;
     font-family: sans-serif;
 } 
-
-.red,
-.silver,
-.black,
-.blue,
-.yellow{
-    display:flex;
-    justify-content: flex-end;
-    border: solid white 2px;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    margin: 5%;
-    color: transparent;
-}
 
 .red{
     background-color: red;
@@ -256,8 +222,6 @@ section .models{
     background-color: rgb(255, 204, 0);
 }
 
-
-
 #container3{
     display: flex;
     flex-direction: column;
@@ -266,7 +230,6 @@ section .models{
     text-align: center;
     flex-wrap: wrap;
     height: 42vh;
-    max-width: 100%;
     min-width:37vh;
     max-height: 300px;
     width:100%;
@@ -290,9 +253,7 @@ section .models{
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
-    margin: 0%;
-    
+    width: 100%;   
 }
 
 #container4 img{
@@ -302,7 +263,6 @@ section .models{
     object-position: center;    
     height: auto;
     z-index: -1;
-
 }
 
 #findstore{
@@ -321,7 +281,6 @@ section .models{
 }
 
 #findstore span{
-   /*  font-size: clamp(2.4rem, 3vw, 5rem); */
     font-family:Arial, Helvetica, sans-serif;
     color: #EEEEEE;
     width: 80%;
@@ -353,7 +312,6 @@ section .models{
     justify-self: flex-end;
 }
 
-
 #container5{
     display: flex;
     flex-direction: row;
@@ -361,7 +319,6 @@ section .models{
     white-space: nowrap;
     max-height: 40%; 
     min-height:340px;
-    margin: 1%;
     margin-left: -1%;
     margin-top: 2%;
     margin-bottom:2%;
@@ -381,7 +338,6 @@ section .models{
     padding: 2%;
     background-color: #D9D9D9;
     border-radius: 2%;
- 
 }
 
 #container5 img{
@@ -429,7 +385,6 @@ section .models{
     flex-direction: column;
     position: relative;
     width: 100%;
- 
 }
 
 #container6 article{
@@ -444,15 +399,13 @@ section .models{
     margin: 0%;
 }
 
-#container6 h4 {
-   
+#container6 h4 {  
     font-size: 4ex;
     font-family:sans-serif;
     font-weight: 100;
 }
 
 #container6 p {   
-    
     font-size: 3ex;
     font-family:sans-serif;
     width: 83%;
@@ -469,7 +422,6 @@ section .models{
     max-width: 100%;
     margin: 0%;
 }   
-
 
 #container7 {
     display: flex;
@@ -524,7 +476,6 @@ section .models{
     width: 78vw;
     max-width: 447px;
     max-height: 432px; 
-   /*  min-height: ; */
     height: 51vh; 
     object-fit: cover; 
     border-radius: 5%;
@@ -694,7 +645,6 @@ section .models{
 
     #container{      
         align-items: self-start;
-        justify-self: flex-start;
         max-height: 82vh;
     }
 
@@ -707,17 +657,19 @@ section .models{
         position: relative;
         margin: 4%;
         width: 400px;
-          }
+    }
 
     #modelsnav span{
         display: block;
     }
+
     #container2 #modelbutton1, #modelbutton2,
     #modelbutton3,
     #modelbutton4{
         justify-self: flex-start;
         flex-wrap: wrap;  
     }
+
     .modelsnav a{
         right: 22%;
     }
@@ -729,7 +681,7 @@ section .models{
         display: inline;  
     }
 
-    .red,
+.red,
 .silver,
 .black,
 .blue,
@@ -759,12 +711,12 @@ section .models{
 .yellow{
     background-color: rgb(255, 204, 0);
 }
+
 #container3{
     display: block;
     text-align: left;
     min-height: 250px;
     max-height: 336px;
-
 }
 
 #container3 > h3{
@@ -813,11 +765,9 @@ section .models{
 }
 
 #container5 img{
-    height: 250px;
-    
+    height: 250px;    
     align-self: center;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 #container5 h4, .asidec5 {
@@ -829,19 +779,10 @@ section .models{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    
-    overflow: hidden;
-  
-    
+    overflow: hidden; 
 }
 
 #container6 img{
-    /* position: relative;
-    z-index: -1;
-    object-position: 100%;
-    object-fit: cover;
-    min-height: 112vh;
-    height:auto; */
     position: relative;
     width: 100%;
     max-height: 803px;
@@ -849,9 +790,7 @@ section .models{
     object-fit: cover;
     object-position: center;
     height: auto;
-    z-index: -1;
-
-   
+    z-index: -1;   
 }  
 
 #container6 article{
@@ -870,14 +809,15 @@ section .models{
     color: #EEEEEE;
     font-size:clamp(1.5rem, 4vw, 6rem); 
     margin-left: 10%;
-    text-shadow: black 0px 0px 4px;
-   
+    text-shadow: black 0px 0px 4px;  
 }
+
 #container6 p{
     color: #EEEEEE;
     font-size:clamp(1.0rem, 1vw, 5rem); 
     width: 28%;
     margin-left: 10%;
+    margin-top: 0%;
     text-shadow: black 0px 0px 2px;
 }
 
@@ -888,21 +828,17 @@ section .models{
     justify-content: center;
 }
 
-#divcontainer7{
-   
+#divcontainer7{   
     max-width:720px;
     height: 40vh;
     display: flex;
-    justify-content: space-between;
-    
-    
+    justify-content: space-between;  
 }
 
 #divcontainer7 h4, #divcontainer7 p{
     margin: 0%;
     text-align: start;  
 } 
-
 
 .maybachbutton{
     align-self: start;  
@@ -917,9 +853,9 @@ section .models{
     flex-direction: row;
     height: 24vh;
 }
+
 #footercontainer p{
-    max-width:57vw; /* 490px */;
-    
+    max-width:57vw;    
 }
 
 #footercontainer2{
@@ -928,6 +864,5 @@ section .models{
     max-height: 65vh;
     padding-top: 6%;
 }
-
 }
  
