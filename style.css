@@ -1,32 +1,50 @@
+:root{
+    --marginZero: 0px;
+    --paddingZero: 0px;
+    --mainColor: #EEEEEE;
+    --secondaryColor: #D9D9D9;
+    --blackColor: #000000;
+    --displayFlex: flex;
+    --absolutePosition: absolute;
+    --relativePosition: relative;
+    --flexColumn: column;
+    --flexRow: row;
+    --justifyContent-Center: center;
+    --justifyContent-SpaceBetween: space-between;
+    --alignItems-Center: center;
+    --font-SansSerif: sans-serif;
+    --font-LucidaSans: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: var(--marginZero);
+    padding: var(--paddingZero);
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
 
 header{
-    margin: 0;
+    margin: var(--marginZero);
     height: max-content;
     width: auto;
     padding: 13px;
-    display: flex;
+    display: var(--displayFlex);
 }
 
 #mainnav{
     width: max-content; 
-    display: flex;
+    display: var(--displayFlex);
     flex-grow: 1;
-    align-items: center;
+    align-items: var(--alignItems-Center);
 }
 
 #navlist{
-    display: flex;
-    flex-direction: row;
+    display: var(--displayFlex);
+    flex-direction:var(--flexRow);
     flex-grow: 1;
-    margin: 0;
+    margin: var(--marginZero);
     width: 2%;
     justify-content: start; 
     margin-bottom: -2px;
@@ -36,13 +54,13 @@ header{
 
 .logoheader{
     height: 30px; 
-    position: absolute;
+    position: var(--absolutePosition);
     margin-left: 0px;
     margin-right: 2%;
 }
 
 #menulogo{
-    display: flex;
+    display: var(--displayFlex);
     justify-self: flex-end;
     width: 30px;
     cursor: pointer;
@@ -54,21 +72,21 @@ header{
 }
 
 #navlist li a {
-    color: black; 
+    color: var(--blackColor);
     margin-right: 58px;
 }
 
 header img {
-    display: flex;
-    flex-direction: row;
+    display: var(--displayFlex);
+    flex-direction: var(--flexRow);
     height: 30px; 
 }
 
 #headericons{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display:var(--displayFlex);
+    flex-direction: var(--flexRow);
+    justify-content: var(--justifyContent-SpaceBetween);
+    align-items: var(--alignItems-Center);
     margin: -10px;
     height: 35px;
     gap: 15px;
@@ -79,7 +97,7 @@ header img {
 }
 
 #container{
-    display: flex;
+    display: var(--displayFlex);
     align-items: flex-end;
     width: 100%;
     height: auto; 
@@ -89,25 +107,27 @@ header img {
 }
 
 #container div{
-    display:flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
+    display:var(--displayFlex);
+    position: var(--absolutePosition);
+    flex-direction: var(--flexColumn);
+    justify-content: var(--justifyContent-Center);
     height: 97px;
-    width: 100%;
+    width: max-content; 
     margin-left: 16px;
 }
 
 #container h1 {
-    color:#EEEEEE;
+    color: var(--mainColor);
     font-size: clamp(1.2rem, 8vw, 5rem);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: max-content;    
 }
 
 #container p {
-    display: flex;
+    display: var(--displayFlex);
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color:#EEEEEE
+    color:var(--mainColor);
+    width: max-content; 
 }
 
 #container img{
@@ -121,22 +141,22 @@ header img {
 } 
 
 #container2{
-    display: flex;
+    display: var(--displayFlex);
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-items: var(--alignItems-Center);
+    justify-content: var(--justifyContent-Center);
     text-align: center;
     max-width: 1440PX;
     min-width: 100%;
 }
 
-section .models{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
+main .models{
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    justify-content: var(--justifyContent-Center);
+    align-items: var(--alignItems-Center);
     flex-wrap: nowrap;
-    background-color:#D9D9D9 ;
+    background-color:var(--secondaryColor);
     max-width: 636px;
     min-width: 34vw;
     margin: 3%;
@@ -148,18 +168,18 @@ section .models{
 
 .models h3{
     display: inline-block;
-    position:relative;
+    position:var(--relativePosition);
     max-width: 4em;
     font-size: 29px; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-LucidaSans);
 }
 
 .models .modelspan{
-    display: flex;
-    position: relative;
+    display: var(--displayFlex);
+    position: var(--relativePosition);
     margin-top: 3%;
     font-size: 15px;   
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-family:var(--font-LucidaSans); 
 }
 
 .models img{
@@ -171,25 +191,25 @@ section .models{
 }
 
 .modelsnav{
-  display: flex;
-  position: relative;
+  display: var(--displayFlex);
+  position:var(--relativePosition);
   bottom: 10%;
 }
 
 .modelsnav a{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    display:var(--displayFlex);
+    align-items: var(--alignItems-Center);
+    justify-content: var(--justifyContent-Center);
     text-decoration: none;
-    color: black;
-    position: relative;
+    color: var(--blackColor);
+    position: var(--relativePosition);
     margin: auto; 
 }
 
  .modelsnav span{
-    position: relative;
-    display: flex;
-    align-items: center;
+    position: var(--relativePosition);
+    display: var(--displayFlex);
+    align-items: var(--alignItems-Center);
     bottom: -8px;
     margin: 11px;
     right: -30px; 
@@ -199,11 +219,11 @@ section .models{
 #container2 #modelbutton1, #modelbutton2,
 #modelbutton3,
 #modelbutton4{
-    background-color: #EEEEEE;
+    background-color: var(--mainColor);
     width: 120px;
     height: 45px;
     border-radius: 23px;
-    font-family: sans-serif;
+    font-family: var(--font-SansSerif);
 } 
 
 .red{
@@ -213,7 +233,7 @@ section .models{
     background-color: silver;
 }
 .black{
-    background-color: black;
+    background-color: var(--blackColor);
 }
 .blue{
     background-color: blue;
@@ -223,10 +243,10 @@ section .models{
 }
 
 #container3{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    align-content: center; /* ojo es align content */
+    justify-content: var(--justifyContent-Center);
     text-align: center;
     flex-wrap: wrap;
     height: 42vh;
@@ -241,7 +261,7 @@ section .models{
 }
 
 #container3 p{
-    position: relative;
+    position: var(--relativePosition);
     align-self: flex-end;
     font-size: clamp(1.5rem, 3vw, 5rem);
     margin: 5%; 
@@ -249,15 +269,15 @@ section .models{
 }
 
 #container4{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    display: var(--displayFlex);
+    align-items: var(--alignItems-Center);
+    justify-content: var(--justifyContent-Center);
+    position: var(--relativePosition);
     width: 100%;   
 }
 
 #container4 img{
-    position: relative;
+    position: var(--relativePosition);
     width: 100%;    
     object-fit:cover;
     object-position: center;    
@@ -267,33 +287,33 @@ section .models{
 
 #findstore{
     background-color: rgba(238, 243, 243, 0.355);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    align-items: var(--alignItems-Center);
+    justify-content: space-around /* var(--justifyContent-Center) */;
     min-width: 325px;
     max-width: 474px;
     min-height: 210px;
     max-height: 365px;
-    position: absolute;
+    position: var(--absolutePosition);
     border-radius: 4%;
     margin: 2%
 }
 
 #findstore span{
     font-family:Arial, Helvetica, sans-serif;
-    color: #EEEEEE;
+    color: var(--mainColor);
     width: 80%;
     font-size: 35px;
     text-align: center;
 }
  
 #findstorebutton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    background-color: #EEEEEE;
+    display: var(--displayFlex);
+    align-items: var(--alignItems-Center);
+    justify-content: var(--justifyContent-Center);
+    color: var(--blackColor);
+    background-color: var(--mainColor);
     border-radius: 23px;
     width: 260px;
     height: 48px;
@@ -307,14 +327,14 @@ section .models{
 
 #findstore a{
     font-size: 17px;
-    font-family: sans-serif; 
+    font-family: var(--font-SansSerif); 
     align-self: center;
     justify-self: flex-end;
 }
 
 #container5{
-    display: flex;
-    flex-direction: row;
+    display: var(--displayFlex);
+    flex-direction: var(--flexRow); 
     overflow-x: auto;
     white-space: nowrap;
     max-height: 40%; 
@@ -325,10 +345,10 @@ section .models{
 }
 
 #container5 div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    justify-content: var(--justifyContent-SpaceBetween);
+    align-items: var(--alignItems-Center);
     flex: 0 0 auto;
     min-width: 354px;
     max-width: 546px;
@@ -336,7 +356,7 @@ section .models{
     max-height: 489px;
     margin-left: 6%;
     padding: 2%;
-    background-color: #D9D9D9;
+    background-color: var(--secondaryColor);
     border-radius: 2%;
 }
 
@@ -344,14 +364,14 @@ section .models{
     min-width: 288px;
     max-width: 95%;
     height: 191px;
-   margin-bottom: 9%; 
+    margin-bottom: 9%; 
 }
 
 .asidec5{
-    background-color: #EEEEEE;
-    display:flex;
+    background-color:var(--mainColor);
+    display:var(--displayFlex);
     justify-content: flex-start;
-    position: relative;
+    position: var(--relativePosition);
     width: 35%; 
     padding: 3%;
     margin-top:-10%;
@@ -360,40 +380,39 @@ section .models{
 
 #container5 h4{
     font-size: 2em;
-    font-family:sans-serif;
+    font-family:var(--font-SansSerif);
     margin-top: 2%;
     font-weight: 100;
 }
 
 #container5 a{
-    position:relative;
+    position:var(--relativePosition);
     left: 0%;
     text-decoration: none;
-    color:black;
-    font-family:sans-serif;     
+    color:var(--blackColor);
+    font-family: var(--font-SansSerif);     
 }
 
 .buttoninfo{
     margin-left: 15%;
     justify-content: flex-start;
-    align-items: center;
+    align-items: var(--alignItems-Center);
 } 
 
 
 #container6 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    position: var(--relativePosition);
     width: 100%;
 }
 
 #container6 article{
-    display: flex;
-    flex-direction: column;
+    display: var(--displayFlex);
     justify-content: space-evenly;
-    align-items: center;
+    align-items: var(--alignItems-Center);
     flex-wrap: wrap;
-    background-color:#D9D9D9;
+    background-color:var(--secondaryColor);
     width: 100%;
     height: 31vh;
     margin: 0%;
@@ -401,13 +420,13 @@ section .models{
 
 #container6 h4 {  
     font-size: 4ex;
-    font-family:sans-serif;
+    font-family: var(--font-LucidaSans);
     font-weight: 100;
 }
 
 #container6 p {   
-    font-size: 3ex;
-    font-family:sans-serif;
+    font-size: 2.5ex;
+    font-family: var(--font-SansSerif);
     width: 83%;
     margin: 2%
 }
@@ -420,23 +439,23 @@ section .models{
     min-height: 27vh;
     max-height: 82vh;
     max-width: 100%;
-    margin: 0%;
+    margin: var(--marginZero);
 }   
 
 #container7 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    justify-content: var(--justifyContent-Center);
     text-align: center;
-    align-items: center;
+    align-items: var(--alignItems-Center);
     padding: 15px;
     font-family: Arial, sans-serif;
     height: 86vh;    
 }
 
 #divcontainer7 {
-    display:flex;
-    flex-direction: column;
+    display:var(--displayFlex);
+    flex-direction: var(--flexColumn);
     align-items: center;   
     flex: 1;
     padding: 20px;
@@ -444,17 +463,17 @@ section .models{
 }
 
 #divcontainer7 h4 {
-    display: flex;
+    display: var(--displayFlex);
     text-align: center;
-    font-size: clamp(1.6rem, 3vw, 5rem);  
+    font-size: clamp(1.5rem, 3vw, 5rem);  
     margin-bottom: 15px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-LucidaSans);
     font-weight: 100;
     line-height: 104%;
 }
 
 #divcontainer7 p {
-    display: flex;
+    display: var(--displayFlex);
     font-size: clamp(1.0rem, 1vw, 5rem);
     margin-bottom: 28px;
     width: 100%;
@@ -463,7 +482,7 @@ section .models{
 .maybachbutton {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: var(--blackColor);
     font-size: 14px;
     transition: background-color 0.9s ease;
 }
@@ -482,96 +501,96 @@ section .models{
 }
 
 #footercontainer{
-    display: flex;
-    flex-direction: column;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
     justify-content: space-evenly;
     text-align: center;
-    align-items: center;
+    align-items: var(--alignItems-Center);
     width: 100%;
     height: 38vh;
     background-color: rgb(92, 91, 91);
 }
 
 #footercontainer button{
-    background-color: #EEEEEE;
+    background-color: var(--mainColor);
     width: 174px;
     height: 50px;
     border-radius: 23px;
     border: none;
-    font-family: sans-serif;
+    font-family: var(--font-SansSerif);
 }
 
 #footercontainer p{
     font-size:clamp(1.1rem, 1vw, 5rem); 
-    color:#EEEEEE;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:var(--mainColor);
+    font-family: var(--font-LucidaSans);
 }
 
 #footercontainer1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    align-items: var(--alignItems-Center);
     justify-content: space-evenly;
     min-height: 355px;
-    background-color: black;
-    color: #EEEEEE;
+    background-color: var(--blackColor);
+    color: var(--mainColor);
 }
 
 #footercontainer1 h6{
     font-size: 19px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-LucidaSans);
     font-weight: 100;
-    position: relative;  
+    position: var(--relativePosition);  
 }
 
 #footercontainer1 p{
     font-size: 14px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-LucidaSans);
     font-weight: 100;
-    position: relative;
+    position: var(--relativePosition);
 }
 
 #emailform{
-    display: flex;
+    display: var(--displayFlex);
 }
 
 #emailform input{
-    display: flex;
-    flex-direction: row;
+    display: var(--displayFlex);
+    flex-direction: var(--flexRow);
     margin-left: 6%;
     margin-right: -15%;
     border-radius: 20px;
     padding: 12px;
     width: 240px;
     background-color: transparent;
-    border: #EEEEEE solid 2px;
+    border: var(--mainColor) solid 2px;
 }
 
 #emailform button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexRow);
+    justify-content: var(--justifyContent-Center);
     margin-left: 5%;
-    border: 1px solid #EEEEEE;
+    border: 1px solid var(--mainColor);
     border-radius: 20px;
     padding: 14px;
     width: 139px;
 }
 
 #socialmedia ul{
-    display: flex; 
+    display: var(--displayFlex);
     gap: 15px; 
 }
 
 #socialmedia li {
-    display: flex;
+    display: var(--displayFlex);
 }
 
 #checkboxform {
-    display: flex;
-    justify-content: center;
+    display: var(--displayFlex);
+    justify-content: var(--justifyContent-Center);
     font-size: 12px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-LucidaSans);
     min-width: 100px;
 }
 
@@ -587,40 +606,40 @@ section .models{
 }
 
 #footercontainer2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    align-items: var(--alignItems-Center);
     flex-wrap: wrap;
-    background-color: black;
+    background-color: var(--blackColor);
 }
 
 .sectionfooter{
-    display: flex;
-    flex-direction: column;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
     height: 28ex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-LucidaSans);
 }
 
 .sectionfooter h4{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    display:var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    align-items: var(--alignItems-Center);
     font-size: 28px;  
     margin-bottom: 5%;
-    color: #EEEEEE;
+    color: var(--mainColor);
 }
 
 .sectionfooter ol{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
+    align-items: var(--alignItems-Center);
     margin-left: 30%;
     margin-top: 0%;
 }
 
 .sectionfooter li{
-    display:flex;
-    color: #EEEEEE;
+    display:var(--displayFlex);
+    color: var(--mainColor);
     width: max-content;
     margin-left: -39%;
     margin-top: 0%;
@@ -631,7 +650,7 @@ section .models{
 
 @media screen and (min-width: 650px){
     #navlist li {
-        display: flex;
+        display: var(--displayFlex);
         gap: 1%; 
     }
 
@@ -653,8 +672,8 @@ section .models{
     }
 
     .modelsnav{
-        display: flex;
-        position: relative;
+        display: var(--displayFlex);
+        position: var(--relativePosition);
         margin: 4%;
         width: 400px;
     }
@@ -675,9 +694,9 @@ section .models{
     }
 
     .modelsnav span{
-        position: relative;
-        display: flex;
-        align-items: center; 
+        position: var(--relativePosition);
+        display: var(--displayFlex);
+        align-items: var(--alignItems-Center);
         display: inline;  
     }
 
@@ -686,7 +705,7 @@ section .models{
 .black,
 .blue,
 .yellow{
-    display:flex;
+    display:var(--displayFlex);
     justify-content: flex-end;
     border: solid white 2px;
     width: 30px;
@@ -703,7 +722,7 @@ section .models{
     background-color: silver;
 }
 .black{
-    background-color: black;
+    background-color: var(--blackColor);
 }
 .blue{
     background-color: blue;
@@ -776,14 +795,14 @@ section .models{
 } 
 
 #container6{
-    display: flex;
-    flex-direction: column;
+    display: var(--displayFlex);
+    flex-direction: var(--flexColumn);
     justify-content: end;
     overflow: hidden; 
 }
 
 #container6 img{
-    position: relative;
+    position: var(--relativePosition);
     width: 100%;
     max-height: 803px;
     min-height: auto;
@@ -794,45 +813,45 @@ section .models{
 }  
 
 #container6 article{
-    display: flex;
+    display: var(--displayFlex);
     flex-wrap: nowrap;
-    flex-direction: column;
+    flex-direction: var(--flexColumn);
     justify-content: flex-start;
     background-color: transparent;
-    position: absolute;
+    position: var(--absolutePosition);
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
 } 
 
 #container6 h4{
-    color: #EEEEEE;
+    color: var(--mainColor);
     font-size:clamp(1.5rem, 4vw, 6rem); 
     margin-left: 10%;
-    text-shadow: black 0px 0px 4px;  
+    text-shadow: var(--blackColor) 0px 0px 4px;  
 }
 
 #container6 p{
-    color: #EEEEEE;
+    color: var(--mainColor);
     font-size:clamp(1.0rem, 1vw, 5rem); 
     width: 28%;
     margin-left: 10%;
     margin-top: 0%;
-    text-shadow: black 0px 0px 2px;
+    text-shadow: var(--blackColor) 0px 0px 2px;
 }
 
 #container7{
-    flex-direction: row;
+    flex-direction: var(--flexRow);
     max-height: 816px;
     gap: 15%;
-    justify-content: center;
+    justify-content: var(--justifyContent-Center);
 }
 
 #divcontainer7{   
     max-width:720px;
     height: 40vh;
-    display: flex;
-    justify-content: space-between;  
+    display: var(--displayFlex);
+    justify-content: var(--justifyContent-SpaceBetween);  
 }
 
 #divcontainer7 h4, #divcontainer7 p{
@@ -850,7 +869,7 @@ section .models{
 }
 
 #footercontainer{
-    flex-direction: row;
+    flex-direction: var(--flexRow);
     height: 24vh;
 }
 
@@ -859,7 +878,7 @@ section .models{
 }
 
 #footercontainer2{
-    flex-direction: row;
+    flex-direction: var(--flexRow);
     justify-content: space-evenly;
     max-height: 65vh;
     padding-top: 6%;
